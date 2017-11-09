@@ -1,5 +1,5 @@
 import React from 'react';
-
+import PropTypes from 'prop-types';
 class TodoItem extends React.Component {
     constructor(props) {
         super(props);
@@ -68,6 +68,14 @@ class TodoItem extends React.Component {
             </section>
         )
     }
+}
+
+TodoItem.propTypes = {
+    index: PropTypes.number.isRequired,
+    clickHandler: PropTypes.func.isRequired,
+    deleteTask: PropTypes.func.isRequired,
+    editTask: PropTypes.func.isRequired,
+    detail: PropTypes.object.isRequired,
 }
 
 export default TodoItem;
